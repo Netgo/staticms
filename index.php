@@ -10,6 +10,8 @@
 
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/staticms.css" rel="stylesheet">
+
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -72,19 +74,20 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1 class="editable" id="1"><?=getContent(1)?></h1>
+	<h2>ro</h2>
         <p class="editable" id="3"><?=getContent(3)?></p>
       </div>
 
 <div id="login" class="modal hide fade in" style="display: none; ">
             <div class="modal-header">
               <a class="close" data-dismiss="modal">×</a>
-              <h3>Podaj hasło aby edytować stronę</h3>
+		<img src="/img/enterpassword.png">
             </div>
             <div class="modal-body">
 
     <form class="form-inline" id="myform">
     <input type="password" class="input-small" placeholder="Podaj hasło" id="haslo">
-	<p class="logmsg"></p>
+	<p class="logmsg" id="logmsg"><br /></p>
             </div>
             <div class="modal-footer">
               <a href="#" class="btn" data-dismiss="modal">Anuluj</a>

@@ -1,7 +1,12 @@
+
 $(document).ready(function() {
 
+
+	$("#haslo").click(function () {
+		$("p.logmsg").html("<br />");
+	});
+
     $('#myform').submit(function() {
-	/* alert ("login.js submit 0247"); */
         $.ajax({
             type: "POST",
             url: '/_cms_auth.php',
@@ -15,13 +20,13 @@ $(document).ready(function() {
                     window.location.replace('/');
                 }
                 else {
-		$('p.logmsg').replaceWith('Hasło niepoprawne');
+		    $('p.logmsg').html("Złe hasło");
                 }
             }
         });
 return(false);
-/*	alert ("login.js submit end"); */
 
     });
+
 
 });
