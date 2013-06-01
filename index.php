@@ -1,9 +1,9 @@
-<?php require_once '_cms_lib.php';?>
+<?php require_once '_cms_user/_cms_lib.php';?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>StatiCMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -74,7 +74,6 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1 class="editable" id="1"><?=getContent(1)?></h1>
-	<h2>ro</h2>
         <p class="editable" id="3"><?=getContent(3)?></p>
       </div>
 
@@ -88,28 +87,25 @@
     <form class="form-inline" id="myform">
     <input type="password" class="input-small" placeholder="Podaj hasło" id="haslo">
 	<p class="logmsg" id="logmsg"><br /></p>
-            </div>
             <div class="modal-footer">
-              <a href="#" class="btn" data-dismiss="modal">Anuluj</a>
-    <input type="submit" id="login" class="btn btn-success" value="OK"/>
+            <a href="#" class="btn" data-dismiss="modal">Anuluj</a>
+			<input type="submit" id="login" class="btn btn-success" value="OK"/>
 
             </div>
-</form>
-
+	</form>
+</div>
     
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="/js/bootstrap.js"></script>
 
       <hr>
 
       <footer>
         <p class="editable" id="2"><?=getContent(2)?></p>
-
-<?php if ($_SESSION['admin']==1) echo '<a href="_cms_auth.php" role="button" class="btn btn-mini">Zakończ edycję</a>';?>
-<?php if ($_SESSION['admin']!=1) echo '<a href="#login" role="button" class="btn btn-mini" data-toggle="modal">Edytuj stronę</a>';?>
-
-      </footer>
+		<?php if ($_SESSION['admin']==1) echo '<a href="_cms_user/_cms_auth.php" role="button" class="btn btn-mini">Zakończ edycję</a>';?>
+		<?php if ($_SESSION['admin']!=1) echo '<a href="#login" role="button" class="btn btn-mini" data-toggle="modal">Edytuj stronę</a>';?>
+		  
+		</footer>
 
     </div> <!-- /container -->
 

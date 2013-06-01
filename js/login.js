@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#myform').submit(function() {
         $.ajax({
             type: "POST",
-            url: '/_cms_auth.php',
+            url: '_cms_user/_cms_auth.php',
             data: {
                 username: $("#username").val(),
                 haslo: $("#haslo").val()

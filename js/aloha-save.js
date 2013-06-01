@@ -13,7 +13,7 @@ Aloha.ready(function() {
 			}
 
 			var request = jQuery.ajax({
-				url: "_cms_save.php",
+				url: "_cms_user/_cms_save.php",
 				type: "POST",
 				data: {
 					content : content,
@@ -23,7 +23,7 @@ Aloha.ready(function() {
 			});
 
 			request.done(function(msg) {
-				jQuery("#log").html( msg ).show().delay(10000).fadeOut();
+				jQuery("#log").html( msg ).show().delay(20000).fadeOut();
 			});
 
 			request.error(function(jqXHR, textStatus) {
